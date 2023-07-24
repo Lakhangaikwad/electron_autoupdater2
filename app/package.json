@@ -1,21 +1,22 @@
 {
   "name": "electron-app",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "My test electron app",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon --exec electron .",
     "start": "electron .",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "release": "electron-builder --windows --publish always"
   },
-  "repository": "https://github.com/aishwarya9890/electron-autoupdater-main",
+  "repository": "https://github.com/Lakhangaikwad/electron_autoupdater2",
   "publish": {
     "provider": "github",
     "releaseType": "release"
   },
   "build": {
-    "appId": "com.coderjeet.autoupdater",
+    "appId": "com.autoupdater.autoupdater",
     "productName": "Autoupdater app",
     "win": {
       "target": "nsis"
@@ -32,6 +33,7 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "electron-forge": "^5.2.4",
     "electron-updater": "^5.3.0"
   }
 }
